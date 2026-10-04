@@ -16,6 +16,7 @@ input,select{padding:13px;border:1px solid var(--ink);background:var(--paper);fo
 h3{margin:0 0 5px;font-size:19px}p{margin:0 0 5px;color:var(--muted)}small{font-weight:700;text-transform:uppercase;letter-spacing:.08em}
 .status{display:inline-block;margin-left:9px;font-size:11px;font-weight:900;border:1px solid var(--ink);padding:3px 6px}
 .manifesto{margin:50px 0 20px;padding:26px;border:2px solid var(--ink);background:var(--paper)}.manifesto h2{margin-top:0}
+.paypal-form{margin:0}.paypal-link{appearance:none;border:0;background:none;padding:0;color:var(--ink);font:inherit;font-weight:900;cursor:pointer;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}.paypal-link:hover{text-decoration-thickness:3px}
 footer{font-size:12px;color:var(--muted);padding-bottom:50px}
 @media(max-width:600px){.controls{grid-template-columns:1fr}.show{grid-template-columns:72px 1fr}}
 </style></head>
@@ -30,7 +31,13 @@ footer{font-size:12px;color:var(--muted);padding-bottom:50px}
 <p>The Show List is <strong>for music fans, by music fans.</strong> We aren't paid by artists, promoters, venues, ticketing companies, or anyone else to tell you what to see. <strong>We don't track your behavior and report it back to the concert industry.</strong></p>
 <p><strong>No ads. No affiliate links. No sponsored placement. No pay-to-play. No algorithm deciding what you should see.</strong></p>
 <p>If The Show List helped you find a show, please consider making a donation and help us keep it independent.</p>
-<p><strong>PAY US, NOT THE SUITS. →</strong></p></section>
+<form class="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+<input type="hidden" name="cmd" value="_donations">
+<input type="hidden" name="business" value="theeshowlist@gmail.com">
+<input type="hidden" name="item_name" value="Support The Show List">
+<input type="hidden" name="currency_code" value="USD">
+<button class="paypal-link" type="submit">PAY US, NOT THE SUITS. →</button>
+</form></section>
 </main><footer>THE SHOW LIST · SFO regional edition · Updated October 4, 2026 · Current sweep through January 31, 2027.</footer>
 <script>
 const q=document.getElementById('q'), region=document.getElementById('region'), shows=[...document.querySelectorAll('.show')], visible=document.getElementById('visible');

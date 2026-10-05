@@ -1,14 +1,20 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>PHL — The Show List</title><style>
 :root{--bg:#f4f0e8;--ink:#111;--muted:#6a6862;--paper:#fffdf8}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.35 Arial,Helvetica,sans-serif}
-.wrap{max-width:1100px;margin:auto;padding:24px 18px}header{border-bottom:3px solid;padding:20px 0 18px}.brand{font-weight:900;letter-spacing:-.04em}h1{font-size:clamp(44px,9vw,92px);line-height:.85;letter-spacing:-.06em;margin:24px 0 4px}
+.wrap{max-width:1100px;margin:auto;padding:24px 18px}header{border-bottom:3px solid;padding:20px 0 18px}.brand{font-size:clamp(34px,8vw,72px);font-weight:900;letter-spacing:-.055em;line-height:.9}.brand a{color:var(--ink);text-decoration:none}.brand a:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}h1{font-size:clamp(24px,5vw,46px);font-weight:800;line-height:1;letter-spacing:-.04em;margin:10px 0 4px}
 .controls{position:sticky;top:0;background:var(--bg);padding:14px 0;border-bottom:1px solid;z-index:2}input{width:100%;padding:12px;border:1px solid;background:var(--paper);font:inherit}
 .count{margin:18px 0;color:var(--muted)}.month{font-size:28px;margin:38px 0 8px;border-bottom:3px solid;padding-bottom:7px}
 .show{display:grid;grid-template-columns:82px 1fr;gap:15px;padding:16px 0;border-bottom:1px solid #cbc6bc}.date{font-size:21px;font-weight:900}.date span{display:block;font-size:11px;color:var(--muted)}h3{margin:0 0 3px;font-size:19px}.support{font-size:14px;margin:2px 0 4px}p{margin:0;color:var(--muted)}
 .manifesto{margin:50px 0 20px;padding:26px;border:2px solid;background:var(--paper)}.manifesto h2{margin-top:0}.paypal-form{margin:0}.paypal-link{appearance:none;border:0;background:none;padding:0;color:var(--ink);font:inherit;font-weight:900;cursor:pointer;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
 footer{font-size:12px;color:var(--muted);padding:0 0 45px}@media(max-width:600px){.show{grid-template-columns:68px 1fr}}
-</style></head><body><div class="wrap"><header><div class="brand">THE SHOW LIST</div><h1>PHL</h1></header>
-<div class="controls"><input id="q" placeholder="Search artist, venue, city…" aria-label="Search"></div>
+
+header.standard-city-header{max-width:980px;margin:auto;padding:42px 24px 24px}
+.standard-city-header .brand a{font-size:clamp(34px,8vw,72px);font-weight:900;letter-spacing:-.055em;line-height:.9;color:var(--ink,#151515);text-decoration:none}
+.standard-city-header .brand a:hover{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:5px}
+.standard-city-header .city-standard{font-size:clamp(24px,5vw,46px);font-weight:800;line-height:1;letter-spacing:-.035em;margin-top:10px}
+</style></head><body><div class="wrap"><header class="standard-city-header"><div class="brand"><a aria-label="The Show List home" href="/">THE SHOW LIST</a></div><div class="city-standard">PHILADELPHIA + REGION</div></header>
+<div class="controls"><input aria-label="Search" id="q" placeholder="Search artist, venue, city…"/></div>
 <div class="count"><span id="visible">597</span> listings · October 4, 2026–January 31, 2027</div>
 <main id="shows"><h2 class="month">OCTOBER 2026</h2><article class="show" data-date="2026-10-04" data-text="asha banks the foundry philadelphia pa philadelphia">
 <div class="date">10/04<span>2026</span></div>
@@ -1207,6 +1213,6 @@ footer{font-size:12px;color:var(--muted);padding:0 0 45px}@media(max-width:600px
 <div><h3>Sarah Shafer / Hye-Jin Kim / Hsin-Yun Huang / Peter Stumpf / Cynthia Raim</h3><p>Perelman Theater, Kimmel Center · Philadelphia, PA</p></div></article></main>
 <section class="manifesto"><h2>BENEFITED FROM THE LIST?</h2><p>The Show List is <strong>for music fans, by music fans.</strong> We aren't paid by artists, promoters, venues, ticketing companies, or anyone else to tell you what to see. <strong>We don't track your behavior and report it back to the concert industry.</strong></p>
 <p><strong>No ads. No affiliate links. No sponsored placement. No pay-to-play. No algorithm deciding what you should see.</strong></p><p>If The Show List helped you find a show, please consider making a donation and help us keep it independent.</p>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="paypal-form"><input type="hidden" name="cmd" value="_donations"><input type="hidden" name="business" value="theeshowlist@gmail.com"><input type="hidden" name="item_name" value="Support The Show List"><input type="hidden" name="currency_code" value="USD"><button type="submit" class="paypal-link">PAY US, NOT THE SUITS. →</button></form></section>
+<form action="https://www.paypal.com/cgi-bin/webscr" class="paypal-form" method="post" target="_blank"><input name="cmd" type="hidden" value="_donations"/><input name="business" type="hidden" value="theeshowlist@gmail.com"/><input name="item_name" type="hidden" value="Support The Show List"/><input name="currency_code" type="hidden" value="USD"/><button class="paypal-link" type="submit">PAY US, NOT THE SUITS. →</button></form></section>
 <footer>THE SHOW LIST · PHL / Philadelphia Region cumulative research edition · Updated October 5, 2026 · Listings through January 31, 2027.</footer></div>
 <script>const q=document.getElementById('q'),cards=[...document.querySelectorAll('.show')],n=document.getElementById('visible');function f(){let x=q.value.toLowerCase().trim(),c=0;cards.forEach(e=>{let ok=!x||e.dataset.text.includes(x);e.style.display=ok?'grid':'none';if(ok)c++});n.textContent=c}q.addEventListener('input',f);</script></body></html>
